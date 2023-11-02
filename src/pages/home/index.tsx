@@ -102,7 +102,7 @@ export function Home(){
               <td className={styles.tdLabel} data-label="Preço">
                 {coin.formatedPrice}
               </td>
-              <td className={Number(coin?.delta_24h) >= 0 ? styles.tdProfit : styles.tdLoss}  data-label="Volume">
+              <td className={Number(coin?.delta_24h.replace(',','.')) >= 0 ? styles.tdProfit : styles.tdLoss}  data-label="Volume">
                 <span>{coin.delta_24h}</span>
               </td>
   
